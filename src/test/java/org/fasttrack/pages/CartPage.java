@@ -29,7 +29,7 @@ public class CartPage extends PageObject {
     private WebElementFacade checkoutButton;
 
     public void verifyAddedProduct() {
-        addToCartSuccessMessage.shouldContainText("Pearl Stud Earrings was added to your shopping cart.");
+        addToCartSuccessMessage.shouldContainText("Swing Time Earrings was added to your shopping cart.");
     }
 
     public void updateQuantity() {

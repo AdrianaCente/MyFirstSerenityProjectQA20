@@ -33,7 +33,7 @@ public class CheckoutTest {
 
     @Test
     public void enterBillingInformation() {
-        loginSteps.logIn("seven@yahoo.com", "1234567");
+        loginSteps.logIn("eight@yahoo.com", "1234567");
         wishlistSteps.navigateToProductListPage(driver);
         cartSteps.addProductToCart();
         checkoutSteps.proceedToCheckout();

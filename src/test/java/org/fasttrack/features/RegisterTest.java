@@ -19,7 +19,7 @@ public class RegisterTest {
 
     @Test
     public void verifyValidRegisterTest() {
-        registerSteps.registerUser("Ema", "Didi", "Thomson", "nine@yahoo.com", "1234567", "1234567");
+        registerSteps.registerUser("Ema", "Didi", "Thomson", "ten@yahoo.com", "1234567", "1234567");
         registerSteps.verifyRegisteredUser();
     }
 

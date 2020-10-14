@@ -12,11 +12,24 @@ public class ProductDetailsPage extends PageObject {
     @FindBy(css = ".product-view button[title='Add to Cart']")
     private WebElementFacade addToCartButton;
 
+    @FindBy(css = ".toggle-tabs li:last-of-type")
+    private WebElementFacade reviewLink;
+
+    @FindBy(css = "#customer-reviews a")
+    private WebElementFacade firstReviewLink;
+
     public void clickAddToWishlist() {
         clickOn(addToWishlistLink);
     }
 
     public void clickAddToCart() {
         clickOn(addToCartButton);
+    }
+
+    public void clickReviewLink() {
+        clickOn(reviewLink);
+    }
+    public void clickFirstReviewLink() {
+        clickOn(firstReviewLink);
     }
 }
