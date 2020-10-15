@@ -19,9 +19,9 @@ public class SearchTest {
 
     @Test
     public void searchExistingItem() {
-        searchSteps.enterSearchValue("pearl");
+        searchSteps.enterSearchValue("shirt");
         searchSteps.clickSearch();
-        searchSteps.verifySearchText("PEARL");
+        searchSteps.verifySearchText("shirt");
     }
 
     @Test
