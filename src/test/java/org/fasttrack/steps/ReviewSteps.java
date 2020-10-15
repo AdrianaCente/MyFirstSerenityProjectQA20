@@ -16,13 +16,13 @@ public class ReviewSteps {
     }
 
     @Step
-    public void enterReviewDetails() {
+    public void enterReviewDetails(String review, String summary, String nickname) {
         reviewPage.clickPrice();
         reviewPage.clickValue();
         reviewPage.clickQuality();
-        reviewPage.setReviewField();
-        reviewPage.setSummaryField();
-        reviewPage.setNicknameField();
+        reviewPage.setReviewField(review);
+        reviewPage.setSummaryField(summary);
+        reviewPage.setNicknameField(nickname);
     }
 
     @Step

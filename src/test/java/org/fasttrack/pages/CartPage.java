@@ -28,8 +28,13 @@ public class CartPage extends PageObject {
     @FindBy(css =".cart-totals-wrapper button[title='Proceed to Checkout']")
     private WebElementFacade checkoutButton;
 
+    @FindBy(css ="#shopping-cart-table > tbody > tr.last h2 a ")
+    private WebElementFacade productName;
+
     public void verifyAddedProduct() {
-        addToCartSuccessMessage.shouldContainText("Swing Time Earrings was added to your shopping cart.");
+        String cartMessage = addToCartSuccessMessage.getText();
+        String itemName = productName.getAttribute("innerHTML");
+        Assert.assertTrue(cartMessage.contains(itemName));
     }
 
     public void updateQuantity() {

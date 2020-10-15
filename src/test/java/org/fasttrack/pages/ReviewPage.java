@@ -45,16 +45,16 @@ public class ReviewPage extends PageObject {
         clickOn(quality);
     }
 
-    public void setReviewField() {
-        typeInto(reviewField, "Some review");
+    public void setReviewField(String review) {
+        typeInto(reviewField, review);
     }
 
-    public void setSummaryField() {
-        typeInto(summaryField, "Some summary");
+    public void setSummaryField(String summary) {
+        typeInto(summaryField, summary);
     }
 
-    public void setNicknameField() {
-        typeInto(nicknameField, "Some nickname");
+    public void setNicknameField(String nickname) {
+        typeInto(nicknameField, nickname);
     }
 
     public void clickSubmit() {

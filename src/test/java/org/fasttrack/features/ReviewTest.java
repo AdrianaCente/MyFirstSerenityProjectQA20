@@ -26,7 +26,7 @@ public class ReviewTest {
         wishlistSteps.navigateToProductListPage(driver);
         wishlistSteps.navigateToDetailsPage(0);
         reviewSteps.navigateToReviewPage();
-        reviewSteps.enterReviewDetails();
+        reviewSteps.enterReviewDetails("Test review", "Test summary", "Test nickname");
         reviewSteps.clickSubmit();
         reviewSteps.verifyReview();
     }
