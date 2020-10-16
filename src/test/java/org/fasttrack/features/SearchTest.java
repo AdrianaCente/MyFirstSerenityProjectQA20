@@ -30,4 +30,19 @@ public class SearchTest {
         searchSteps.clickSearch();
         searchSteps.verifySearchWithNoResults();
     }
+
+    @Test
+    public void searchAfterTitle() {
+        searchSteps.enterSearchValue("shirt");
+        searchSteps.clickSearch();
+        searchSteps.verifyWithATitle("PLAID COTTON SHIRT");
+    }
+
+    @Test
+    public void searchAndCompareProductPrice() {
+        searchSteps.enterSearchValue("shirt");
+        searchSteps.clickSearch();
+        searchSteps.selectSortOption("Price");
+        searchSteps.checkProductPrice();
+    }
 }

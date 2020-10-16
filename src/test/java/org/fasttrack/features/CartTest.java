@@ -5,6 +5,7 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.fasttrack.steps.CartSteps;
 import org.fasttrack.steps.LoginSteps;
+import org.fasttrack.steps.SearchSteps;
 import org.fasttrack.steps.WishlistSteps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +25,9 @@ public class CartTest {
 
     @Steps
     private WishlistSteps wishlistSteps;
+
+    @Steps
+    private SearchSteps searchSteps;
 
     @Test
     public void addToCartFromGalleryPageTest(){
@@ -56,6 +60,18 @@ public class CartTest {
         cartSteps.navigateToCart();
         cartSteps.removeItemFromCart();
         cartSteps.verifyRemovedItem();
+    }
+
+    @Test
+    public void checkSummaryCart() {
+        loginSteps.logIn("ema@yahoo.com", "1234567");
+        searchSteps.navigateToSearchedProduct("necklace", "SILVER DESERT NECKLACE");
+        cartSteps.addProductToCartFromDetailsPage();
+        searchSteps.navigateToSearchedProduct("memory", "16GB MEMORY CARD");
+        cartSteps.addProductToCartFromDetailsPage();
+        searchSteps.navigateToSearchedProduct("earrings", "SWING TIME EARRINGS");
+        cartSteps.addProductToCartFromDetailsPage();
+        cartSteps.checkTotalPrice();
     }
 }
 

@@ -1,6 +1,5 @@
 package org.fasttrack.steps;
 
-import io.cucumber.messages.Messages;
 import net.thucydides.core.annotations.Step;
 import org.fasttrack.pages.CartPage;
 import org.fasttrack.pages.HomePage;
@@ -53,5 +52,15 @@ public class CartSteps {
     @Step
     public void verifyRemovedItem() {
         cartPage.verifyRemoveProduct();
+    }
+
+    @Step
+    public void checkCartTotal() {
+        cartPage.getProductsPrice();
+    }
+
+    @Step
+    public void checkTotalPrice() {
+        cartPage.checkTotalPrice();
     }
 }
