@@ -31,6 +31,7 @@ public class SearchTest {
         searchSteps.verifySearchWithNoResults();
     }
 
+//    1. Search for product test
     @Test
     public void searchAfterTitle() {
         searchSteps.enterSearchValue("shirt");
@@ -38,6 +39,7 @@ public class SearchTest {
         searchSteps.verifyWithATitle("PLAID COTTON SHIRT");
     }
 
+//    2. Search by price test
     @Test
     public void searchAndCompareProductPrice() {
         searchSteps.enterSearchValue("shirt");

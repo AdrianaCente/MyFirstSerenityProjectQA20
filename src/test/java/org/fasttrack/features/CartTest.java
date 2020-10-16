@@ -62,6 +62,7 @@ public class CartTest {
         cartSteps.verifyRemovedItem();
     }
 
+//    3. Cart summary test
     @Test
     public void checkSummaryCart() {
         loginSteps.logIn("ema@yahoo.com", "1234567");
